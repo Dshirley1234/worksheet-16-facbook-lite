@@ -7,7 +7,7 @@ $sql = "SELECT username FROM dbpwusers2 WHERE email='".$_POST['email']."'";
 $result = mysqli_query($connection, $sql);
 $row = $result->fetch_assoc();
 $username = $row['username'];
-
+//pulls the username from the database
 
 $u = new User($connection, $_POST['email'], $_POST['password'], $username);
 
