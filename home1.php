@@ -16,8 +16,7 @@ if (isset($_SESSION['user'])) {
 <html>
     <?php include_once 'partials/header.php';?>
     <head>
-        <link rel="stylesheet" href="home.css">
-        <link rel="stylesheet" href="whole_page.css">
+        <link rel="stylesheet" href="css/home.css">
     </head>
 
     <body>
@@ -28,8 +27,8 @@ if (isset($_SESSION['user'])) {
     <div>
         <?php include "partials/convo.php" ?>
     </div>
-
-
+<br>
+<div class="container">
 <form action="send-message.php" method="post">
     <p>Enter post</p>
     <textarea name="message" type="message" rows="4" cols="50" id="messageinput"></textarea>
@@ -44,6 +43,7 @@ if (isset($_SESSION['user'])) {
     <?php endif ?>
 
 <?php endif?>
+    </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     </body>
 </html>

@@ -1,7 +1,7 @@
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="header.css">
-
+<link rel="stylesheet" type="text/css" href="css/header.css">
+<link rel="stylesheet" href="css/whole_page.css">
 <style>
     .right {
         float:right;
@@ -12,8 +12,6 @@
 
 <div class="navigation-bar">
     <a href="home1.php">Home</a>
-    <a href="login.php">Log in</a>
-    <a href="sign-up.php">Sign-up</a>
     <!--options to go to home page, login and sign-up-->
     <div class="right">
     <?php if(isset($_SESSION["user"])):?>
@@ -23,11 +21,16 @@
         </a>
 
         <ul class="dropdown-menu">
+            <li><a class="dropdown-item" style="color:black;" href="#">Profile</a></li>
             <li><a class="dropdown-item" style="color:black;" href="log-out.php">Log out</a></li>
         </ul>
     </div>
     <!--A drop down menu for the user to sign out with.
      If there is no session this does not appear-->
+    <?php elseif(! isset($_SESION["user"])):?>
+        <a href="login.php">Log in</a>
+        <a href="sign-up.php">Sign-up</a>
     <?php endif; ?>
+
 </div>
 </div>
