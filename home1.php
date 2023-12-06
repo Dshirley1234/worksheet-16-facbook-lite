@@ -1,36 +1,49 @@
 <?php
 include_once 'db.php';
 include_once 'user.php';
-include_once 'partials/header.php';
 session_start();
+
 //starts session and includes some usefull code
 $logged_in = false;
 if (isset($_SESSION['user'])) {
     $logged_in = true;
     $user = unserialize($_SESSION['user']);
-} elseif (! isset($_SESSION['user'])) {
-    echo "<p>No session</p>";
-}
+};
 //checks for session
 
 ?>
 
 <html>
-    <head></head>
+    <?php include_once 'partials/header.php';?>
+    <head>
+        <link rel="stylesheet" href="home.css">
+        <link rel="stylesheet" href="whole_page.css">
+    </head>
 
     <body>
 <?php if ($logged_in): ?>
-    <p>
-        Hello <?= $user->username; ?>
-    </p>
+
+    <br>
+
+    <div>
+        <?php include "partials/convo.php" ?>
+    </div>
 
 
 <form action="send-message.php" method="post">
-    <label for="messageinput" class="form-label">Enter message</label>
+    <p>Enter post</p>
     <textarea name="message" type="message" rows="4" cols="50" id="messageinput"></textarea>
+    <br/>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 <!--this form is for sending messages-->
+    <?php if(isset($_GET['msg']) && $_GET["msg"]=="message-send"): ?>
+        <div>
+            Message sent
+        </div>
+    <?php endif ?>
+
 <?php endif?>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     </body>
 </html>
