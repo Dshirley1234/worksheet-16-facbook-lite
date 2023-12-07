@@ -1,4 +1,6 @@
 
 .msg_content {
-    border: 2px solid black;
+    border-radius: 10px;
+    border:solid 2px #056262;
+    background-color:#056262;
 }

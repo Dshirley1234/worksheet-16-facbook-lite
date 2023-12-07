@@ -11,7 +11,7 @@ include_once "partials/header.php"
     background-color: #172B4D;
     color:aliceblue;
 }
-
+/*this css only works internally not externally*/
         </style>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 <!--bootstrap start-->
@@ -19,6 +19,11 @@ include_once "partials/header.php"
 <body>
     <div style="padding:50px; margin-top: 3em;">
         <h1>Log in</h1>
+
+        <?php if (isset($_GET["msg"]) && $_GET["msg"] =="failed"): ?>
+            <h3 style="background-color:#E4362F; border-radius:10px;">Incorrect username or password </h3>
+        <?php endif ?>
+        <!--tells the user their username or password is wrong-->
 
         <form action="login-action.php" method="post">
             <div class="mb-3">
