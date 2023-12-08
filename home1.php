@@ -11,12 +11,16 @@ if (isset($_SESSION['user'])) {
 };
 //checks for session
 
+if ( ! isset($_SESSION['count'])) {
+    $_SESSION['count'] = 20;
+};
+
 ?>
 
 <html>
     <?php include_once 'partials/header.php';?>
     <head>
-        <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/whole_page.css">
     </head>
     <body>
         <br/>
@@ -28,6 +32,7 @@ if (isset($_SESSION['user'])) {
 
     <div>
         <?php include "partials/convo.php" ?>
+        <!--pull in the code for the chat-->
     </div>
 <br>
 <div class="container">

@@ -7,6 +7,7 @@
         float:right;
     }
     /*this is css to force the dropdown menu to stick to the right*/
+    /*It doesn't want to work externally*/
 </style>
 
 
@@ -21,7 +22,7 @@
         </a>
 
         <ul class="dropdown-menu">
-            <li><a class="dropdown-item" style="color:black;" href="#">Profile</a></li>
+            <li><a class="dropdown-item" style="color:black;" href="profile.php">Profile</a></li>
             <li><a class="dropdown-item" style="color:black;" href="log-out.php">Log out</a></li>
         </ul>
     </div>
@@ -34,3 +35,5 @@
 
 </div>
 </div>
+
+<!--all this code is for the nav bar a the top of the screen-->

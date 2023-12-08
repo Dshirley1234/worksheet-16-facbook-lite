@@ -16,9 +16,8 @@ class User{
         $this->token = md5(rand().time());
         $this->password_hash = password_hash($password, PASSWORD_BCRYPT);
         $this->connection = $connection;
-
     }
-    
+    //creates the users class
     function insert() {
         $sql = "
         INSERT INTO dbpwusers2 (
@@ -41,6 +40,7 @@ class User{
         if(! $sqlQuery){
             die("MySQL query failed" . mysqli_error($this->connection));
         };
+        //uploads the user class created above and uploads it to the dbpwusers2 database
     }
 
     function authenticate() {
@@ -50,6 +50,7 @@ class User{
         WHERE email=\"{$this->email}\";
         ";
 
+        
         $result = $this->connection->query($sql);
         if ($row = $result->fetch_assoc()) {
 
@@ -57,6 +58,7 @@ class User{
                 $this->authenticated = true;
             }
         }
+        //user authentication
     }
 
     function is_logged_in(){
