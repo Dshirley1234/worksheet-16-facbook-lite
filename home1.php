@@ -40,6 +40,7 @@ if ( ! isset($_SESSION['count'])) {
     <p>Enter post</p>
     <textarea name="message" type="message" rows="4" cols="50" id="messageinput"></textarea>
     <br/>
+    <br/>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 <!--this form is for sending messages-->

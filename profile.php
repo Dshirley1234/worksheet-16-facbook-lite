@@ -4,6 +4,45 @@ include_once 'user.php';
 session_start();
 
 $user = unserialize($_SESSION['user']);
-$username = $user->username;
 
-$sql = "SELECT id FROM dbpwusers2 WHERE"
+include_once 'partials/header.php';
+
+$username = $user->username;
+$sql = "SELECT id FROM dbpwusers2 WHERE username='$username'";
+$result = mysqli_query($connection, $sql);
+$row = $result->fetch_assoc();
+$user_id = $row['id'];
+
+$sql = "SELECT * FROM messages WHERE id = '$user_id'";
+$messages = mysqli_query($connection, $sql);
+//$messages = $result->fetch_assoc();
+
+?>
+<html>
+<head>
+    <title>Profile</title>
+</head>
+        <div style="text-align:center">
+            <h1><?= $username?> Profile</h1>
+        </div>
+<body>
+    <br/>
+    <br/>
+    <br/>
+<div class="container chatcontainer">
+    <?php while($row = $messages->fetch_array(MYSQLI_ASSOC)): ?>
+        <h5><?= $username ?></h5>
+    <div class="msg_content">
+        <p style="font-size:20px";><?= $row["content"] ?></p>
+        <p class="date" style="color:#669A9B;"><?= $row["date"]?></p>
+    </div>
+<!--for each row in the database display them on screen in a certain format.-->
+        <br/>
+    <?php endwhile; ?>
+    </div>
+
+    <button type="button" href="change_password.php" class="btn btn-primary">Change password</button>
+</body>
+
+
+</html>
