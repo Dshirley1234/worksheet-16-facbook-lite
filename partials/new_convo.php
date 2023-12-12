@@ -13,12 +13,15 @@
         $.getJSON("get_message.php?id=" + last_id, function(data){
             $("#messages").append("<div class='msg_content'>"+data[last_id]["content"]+"</div> <br/>");
             last_id = last_id+1;
+            if (last_id == data.length) {
+                last_id = 0;
+            };
         });
     }
 
     function update() {
         get_messages();
-        setTimeout(update, 300);
+        setTimeout(update, 1);
     }
     $(document).ready(function(){
         update();
