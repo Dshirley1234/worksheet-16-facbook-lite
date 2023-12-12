@@ -24,8 +24,8 @@ if (isset($_GET["id"])) {
     $msg = $message[$_GET["id"]];
     $msg = array_values($msg);
 };
-
-echo json_encode($msg);
+echo json_encode($message)
+//echo json_encode($msg);
 
 
 
