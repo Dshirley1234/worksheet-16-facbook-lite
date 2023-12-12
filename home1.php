@@ -31,7 +31,7 @@ if ( ! isset($_SESSION['count'])) {
     <br>
 
     <div>
-        <?php include "partials/convo.php" ?>
+        <?php include "partials/new_convo.php" ?>
         <!--pull in the code for the chat-->
     </div>
 <br>

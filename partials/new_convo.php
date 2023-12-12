@@ -20,7 +20,7 @@
         get_messages();
         setTimeout(update, 300);
     }
-    $("button").click(function(){
+    $(document).ready(function(){
         update();
     });
    
