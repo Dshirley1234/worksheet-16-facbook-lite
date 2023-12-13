@@ -1,7 +1,11 @@
 <?php
 include_once "db.php";
+
+if (isset($_GET['number'])) {
+    $chatLimit = $_GET['number'];
+};
 $message = array();
-$chatLimit = 5;
+
 
 
 //$chatlimit = $_SESSION['count'];
