@@ -34,6 +34,7 @@ if ( ! isset($_SESSION['count'])) {
         <?php include "partials/new_convo.php" ?>
         <!--pull in the code for the chat-->
     </div>
+    
 <br>
 <div class="container">
 <form action="send-message.php" method="post">

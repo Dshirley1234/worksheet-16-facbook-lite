@@ -41,7 +41,10 @@ $messages = mysqli_query($connection, $sql);
     <?php endwhile; ?>
     </div>
 
-    <button type="button" href="change_password.php" class="btn btn-primary">Change password</button>
+    <a class="btn btn-primary" href="change_password.php" role="button">Change password</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
 </body>
 
 
