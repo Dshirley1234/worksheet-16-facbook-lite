@@ -2,10 +2,13 @@
     border-radius: 10px;
     border:solid 2px #056262;
     background-color:#056262;
-    width:700px;
+    width:70%;
 }
 .chatcontainer{
     overflow:auto; 
     width:60%; 
     height:500px; 
+}
+.date{
+    color:#669A9B;
 }

@@ -5,7 +5,7 @@
 <body>
     <div class="container" style="margin: 0 auto;">
 <div id ="messages" class="container chatcontainer"></div>
-<button>get next</button>
+<button class="btn btn-primary">get next</button>
 </div>
 
 <script>
@@ -16,7 +16,7 @@
             var username = data[last_id]["username"];
             var content = data[last_id]["content"];
             var date = data[last_id]["date"];
-            $("#messages").append("<div class='msg_content'> <h5>"+username+" </h5> <p style='font-size:20px'>"+ content+"</p> <p class='date' style='#669A9B'>"+ date + "</p> </div> <br/>");
+            $("#messages").append("<div class='msg_content'> <h5> "+username+" </h5> <p style='font-size:20px'> "+ content+"</p> <p class='date' style='#669A9B'> "+ date + "</p> </div> <br/>");
             last_id = last_id+1;
         });
     }
