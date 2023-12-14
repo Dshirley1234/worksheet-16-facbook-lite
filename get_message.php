@@ -3,9 +3,6 @@ include_once "db.php";
 
 $message = array();
 
-
-
-//$chatlimit = $_SESSION['count'];
 $sql = "SELECT messages.content, messages.date, dbpwusers2.username  #selects the message content, the date it was sent and the username from dpbwusers2 of who sent it
 FROM messages
 INNER JOIN dbpwusers2 ON messages.id = dbpwusers2.id  #join messages id column with dbpwusers2 id column to get the coresponding usernames
@@ -16,7 +13,6 @@ while($row = $messResult->fetch_array(MYSQLI_ASSOC)){
 $a = array("username"=>$row["username"], "content"=>$row["content"],"date"=> $row["date"]);
 array_push($message, $a);
 };
-
 
 $msg = $message[0];
 

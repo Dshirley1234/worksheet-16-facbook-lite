@@ -32,13 +32,7 @@
         update();
     });
 
-    $("button").click(function(){
-        number = number+ 5;
-        $("#messages").empty();
-        last_id = 0;
-    });
-
-  
+ 
 </script>
 
 </body>
