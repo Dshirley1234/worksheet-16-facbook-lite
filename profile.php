@@ -27,8 +27,7 @@ $messages = mysqli_query($connection, $sql);
         </div>
 <body>
     <br/>
-    <br/>
-    <br/>
+    <a class="btn btn-primary" href="change_password.php" role="button">Change password</a>
 <div class="container chatcontainer">
     <?php while($row = $messages->fetch_array(MYSQLI_ASSOC)): ?>
         <h5><?= $username ?></h5>
@@ -40,8 +39,6 @@ $messages = mysqli_query($connection, $sql);
         <br/>
     <?php endwhile; ?>
     </div>
-
-    <a class="btn btn-primary" href="change_password.php" role="button">Change password</a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
