@@ -28,14 +28,14 @@ include_once "partials/header.php"
         <form action="login-action.php" method="post">
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input name="email" type="email" class="form-control" id="exampleInputEmail">
+                <input name="email" type="email" class="form-control" style="width:500px" id="exampleInputEmail">
                 <!--textbox for user to enter email-->
             </div>
            
 
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input name="password" type="password" class="form-control" id="exampleInputPassword1">
+                <input name="password" type="password" class="form-control" style="width:500px" id="exampleInputPassword1">
                 <!--box for user to enter password-->
 
             </div>
