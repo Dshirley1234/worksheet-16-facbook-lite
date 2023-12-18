@@ -4,33 +4,32 @@ include_once 'user.php';
 session_start();
 
 $user = unserialize($_SESSION['user']);
+
 include_once 'partials/header.php';
 
-if (isset($_GET['user'])) {
-    $username = $_GET['user'];
-} else {
-    $username = $user->username;
-};
-
-$sql = "SELECT id FROM dbpwusers2 where username='$username'";
+$username = $user->username;
+$sql = "SELECT id FROM dbpwusers2 WHERE username='$username'";
 $result = mysqli_query($connection, $sql);
 $row = $result->fetch_assoc();
 $user_id = $row['id'];
+
 $sql = "SELECT * FROM messages WHERE id = '$user_id'";
 $messages = mysqli_query($connection, $sql);
+//$messages = $result->fetch_assoc();
+
 ?>
 <html>
 <head>
     <title>Profile</title>
 </head>
         <div style="text-align:center">
-            <h1><?= $username?> Profile</h1>
+            <h1><?= $username?>'s Profile</h1>
         </div>
 <body>
     <br/>
     <?php if (! isset($_GET["user"])): ?>
     <a class="btn btn-primary" href="change_password.php" role="button">Change password</a>
-    <?php endif?>
+    <? endif?>
     <br/>
     <div class="container chatcontainer">
     <?php while($row = $messages->fetch_array(MYSQLI_ASSOC)): ?>

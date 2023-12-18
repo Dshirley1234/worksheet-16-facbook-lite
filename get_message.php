@@ -23,6 +23,4 @@ if (isset($_GET["id"])) {
 echo json_encode($message)
 //echo json_encode($msg);
 
-
-
 ?>

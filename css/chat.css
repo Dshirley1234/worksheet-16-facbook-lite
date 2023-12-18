@@ -3,6 +3,8 @@
     border:solid 2px #056262;
     background-color:#056262;
     width:90%;
+    overflow:auto;
+    word-break: break-all;
 }
 
 .chatcontainer{

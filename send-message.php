@@ -28,4 +28,4 @@ $time = date('Y-m-d H:i:s');
 $message = new Message($connection, $_POST['message'], $time, $user_id);
 $message->insert();
 //creates a new message class and uploads it into the database
-header('Location: http://localhost/Cookies-practise/worksheet-16-facbook-lite/home1.php?msg=message-send');
+header('Location: http://localhost/Cookies-practise/worksheet-16-facbook-lite/home.php?msg=message-send');

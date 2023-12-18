@@ -12,7 +12,7 @@
 
 
 <div class="navigation-bar">
-    <a href="home1.php">Home</a>
+    <a href="home.php">Home</a>
     <!--options to go to home page, login and sign-up-->
     <div class="right">
     <?php if(isset($_SESSION["user"])):?>
