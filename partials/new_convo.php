@@ -14,8 +14,8 @@
         $.getJSON("get_message.php?id=" + last_id + "&number=" + number, function(data){
         //this is pulling all the message data and formating it
             var username = data[last_id]["username"];
-            var content = data[last_id]["content"];
-            var date = data[last_id]["date"];
+            var content =  data[last_id]["content"];
+            var date =     data[last_id]["date"];
                 $("#messages").append("<div class='msg_content' style='word-break: break-all;'> <a href = 'profile.php?user="+username+"'><h5>"+username+"</h5></a> <p style='font-size:20px'> "+ content+"</p> <p class='date' style='#669A9B'> "+ date + "</p> </div> <br/>");
             //these four lines are putting the messages on the screen
             last_id = last_id+1;

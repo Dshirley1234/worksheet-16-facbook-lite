@@ -11,10 +11,6 @@ if (isset($_SESSION['user'])) {
 };
 //checks for session
 
-if ( ! isset($_SESSION['count'])) {
-    $_SESSION['count'] = 20;
-};
-
 ?>
 
 <html>

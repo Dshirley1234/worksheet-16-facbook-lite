@@ -24,7 +24,7 @@ $messages = mysqli_query($connection, $sql);
     <title>Profile</title>
 </head>
         <div style="text-align:center">
-            <h1><?= $username?> Profile</h1>
+            <h1><?= $username?>'s Profile</h1>
         </div>
 <body>
     <br/>

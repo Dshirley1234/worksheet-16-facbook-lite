@@ -2,6 +2,6 @@
 
 session_start();
 session_destroy();
-header("Location: home1.php")
+header("Location: home.php")
 ?>
 <!--kills the session and logs the usr out-->

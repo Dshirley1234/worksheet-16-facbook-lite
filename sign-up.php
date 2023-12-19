@@ -13,6 +13,14 @@ include_once "partials/header.php"
     <div style="padding:50px; margin-top: 3em;">
         <h1>Sign up for an account!</h1>
 
+    <?php if (isset($_GET['msg']) && $_GET['msg']=="emailfailed"): ?>
+        <p>Nice try Haydn</p>
+    <?php endif ?>
+    <?php if (isset($_GET['msg']) && $_GET['msg']=="userfailed"): ?>
+        <p>Username is in use</p>
+    <?php endif ?>
+
+
         <form action="sign-up-action.php" method="post">
             <div class="mb-3">
                 <label for="exampleInputUsername1" class="form-label">Username</label>
